@@ -1,4 +1,4 @@
 name: practice_server
 version: '${project.version}'
-main: me.practice.practice_server.Practice_server
+main: me.practice.practice_server.PracticeServer
 api-version: '1.20'
