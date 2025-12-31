@@ -1,15 +1,23 @@
 package me.practice.practice_server.game.bridge;
 
+import me.practice.practice_server.model.Team;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitTask;
-import org.bukkit.entity.Player;
-
+import java.util.HashMap;
 
 public class BridgeGame {
   private final JavaPlugin plugin;
 
+  private BukkitTask task;
+  private HashMap<String, Team> teams = new HashMap<>();
+  private HashMap<String, Team> playersInGame = new HashMap<>();
+
   public BridgeGame(JavaPlugin plugin, String mapName, String id, Player[] players) {
     this.plugin = plugin;
+    teams.put("Blue", new Team(org.bukkit.Color.BLUE, "Blue"));
+    teams.put("Red", new Team(org.bukkit.Color.RED, "Red"));
+
     // this.bridgeMap = new BridgeMap(mapName, id);
     // this.players = players;
     // this.scores = new byte[] { 0, 0 };
@@ -51,8 +59,6 @@ public class BridgeGame {
     // }
     // player.getInventory().setArmorContents(bridgeItems.getArmor(color));
   }
-
-  private BukkitTask task;
 
   public void countDown(boolean first, int scored, int second) {
     // this.onCountDown = true;

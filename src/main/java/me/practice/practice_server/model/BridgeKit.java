@@ -1,16 +1,16 @@
 package me.practice.practice_server.model;
 
+import java.util.ArrayList;
+
 import org.bukkit.Color;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
-import java.util.ArrayList;
-import org.bukkit.inventory.meta.LeatherArmorMeta;
-import org.bukkit.Color;
 
 public class BridgeKit {
+
   private int ironSwordSlot;
   private int[] blockSlot;
   private int goldenAppleSlot;
